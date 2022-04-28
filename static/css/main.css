@@ -170,3 +170,17 @@
       width: 165px;
     }
   }
+.modal-header{
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#messages{
+  padding: 30px 0;
+  height: 100%;
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+}
