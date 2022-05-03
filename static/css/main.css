@@ -129,6 +129,10 @@ html * {
 
 #messages {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     padding: 30px 0;
     height: 100%;
     font-size: 1rem;
@@ -145,8 +149,14 @@ html * {
 }
 
 .kpisResult{
-  margin: 0;
+  margin: -7px 0;
   padding: 0;
+}
+
+.data-results{
+    width: 100%;
+    word-break: break-word;
+    text-align: center;
 }
 
 .actionbtns {

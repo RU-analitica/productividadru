@@ -42,6 +42,7 @@
                     })
                 })
                 const data = await req
+
                 results = document.getElementById('messages')
                 results.innerHTML = `<p class="data-results">${await data.text()}<p>`
             }
@@ -71,8 +72,10 @@
                 let myArray3 = myArray.map(function(item, index){
                     return `<p class="kpisResult">${myArray2[index]}: ${item}<p>`
                 })
+                let myArray4 = myArray3.join('')
                 results = document.getElementById('kpis')
-                results.innerHTML = `<p class="data-results">${myArray3.sort()}<p>`
+                results.innerHTML = `<p class="data-results">${myArray4}<p>`
+
             }
             catch(err){
                 console.log(err)

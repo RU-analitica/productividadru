@@ -180,8 +180,9 @@ def doSomething2(formid):
             for id_name in element.items():
                 if formid in id_name:
                     return element
+                else:
+                    return 'No se encontró el ID o el colaborador no cuenta con datos disponibles.'
 
-        return 'No se encontró el ID o el colaborador no cuenta con datos disponibles.'
     except Exception as e:
         return f'Error: {e}'
 
@@ -217,3 +218,4 @@ def index():
 
 if __name__ == '__main__':
     app.run()
+    # app.run(host='0.0.0.0', port=5000)
