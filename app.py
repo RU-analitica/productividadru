@@ -130,7 +130,7 @@ messages = [
     "Hemos concluido la fase  'Intensiva', del programa Acompañándote y de acuerdo con el análisis de los indicadores de productividad, muestra que tus resultados presentan áreas de oportunidad, por lo que No te graduaste y te invitamos a acercarte con tu formador de equipo, para que determinen los planes de acción a seguir.                                                                                                           ",
     "Hemos concluido con la fase 'Intensiva', del programa Acompañándote y de acuerdo al análisis de productividad de tu colaborador, muestra que los resultados presentan areas de oportunidad por que te invitamos mantengas una conversación con el para retroalimentarle. Reúnete con tu colaborador y bríndale una retroalimentación positiva, revisen el plan de acción, generen acciones le ayudaran a subir su productividad.                                                                                                            ",
     "Hemos iniciado la generación 3 del Programa Acompañándote y de acuerdo con el análisis de los indicadores de productividad de tu colaborador, muestra que sus resultados aun presentan áreas de oportunidad, por lo que deberá acompañarlo durante esta fase inicial preventiva. Reúnete con tu colaborador y bríndale una retroalimentación positiva, revisen el plan de acción, generen acciones le ayudaran a subir su productividad.                                                                                                            ",
-    "Hemos iniciado la Generación 3 del Programa Acompañándote y de acuerdo con el análisis de los indicadores de productividad muestra que tus resultados  presentan áreas de oportunidad, por lo que invitamos a participar en la fase preventiva. Reúnete con tu formador de equipo y, generen acciones te ayudaran a subir tu productividad.                                                                                                            ",
+    "Hemos iniciado la Generación 3 del Programa Acompañándote y de acuerdo con el análisis de los indicadores de productividad muestra que tus resultados  presentan áreas de oportunidad, por lo que invitamos a participar en la fase preventiva. Reúnete con tu formador de equipo y, generen acciones que te ayudaran a subir tu productividad.                                                                                                            ",
     "Hemos concluido la fase Intensiva del Programa Acompañándote y de acuerdo con el análisis de los indicadores de productividad muestra que tus resultados fueron satisfactorios, graduándote de esta fase. Reúnete con tu formador de equipo.                                                                                        ",
     "Hemos concluido la fase intensiva del Programa Acompañándote y de acuerdo con el análisis de los indicadores de productividad de tu colaborador, te comentamos que ha sido graduado de la fase. Por favor acércate a el y ten la plantica de retroalimentación.                                                                                                            ",
 ]
@@ -180,8 +180,8 @@ def doSomething2(formid):
             for id_name in element.items():
                 if formid in id_name:
                     return element
-                else:
-                    return 'No se encontró el ID o el colaborador no cuenta con datos disponibles.'
+
+        return element
 
     except Exception as e:
         return f'Error: {e}'
