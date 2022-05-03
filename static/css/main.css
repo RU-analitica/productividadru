@@ -142,7 +142,7 @@ html * {
 #kpis {
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     width: 100%;
     font-weight: 700;

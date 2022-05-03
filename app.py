@@ -78,6 +78,8 @@ def kpis_liderekt_gen3():
         data[i]['Logro'] = percents(data[i]['Logro'])
         data[i]['Prom'] = percents(data[i]['Prom'])
 
+    print(data)
+
     return data
 
 def kpis_liderfinan_gen3():
