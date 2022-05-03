@@ -41,14 +41,13 @@
                         formid: document.getElementById('form').value
                     })
                 })
-                results.innerHTML == ''
                 const data = await req
 
                 results = document.getElementById('messages')
                 results.innerHTML = `<p class="data-results">${await data.text()}<p>`
             }
             catch(err){
-                console.log(err)
+                results.innerHTML = `<p class="data-results">No hay mensajes disponibles para este empleado<p>`
             }
         }
         const button = document.getElementById('button')
@@ -76,10 +75,9 @@
                 let myArray4 = myArray3.join('')
                 results = document.getElementById('kpis')
                 results.innerHTML = `<p class="data-results">${myArray4}<p>`
-
             }
             catch(err){
-                console.log(err)
+                results.innerHTML = `<p class="data-results">No hay KPI' s para este empleado<p>`
             }
         }
         const button2 = document.getElementById('button2')
