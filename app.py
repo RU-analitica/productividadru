@@ -78,8 +78,6 @@ def kpis_liderekt_gen3():
         data[i]['Logro'] = percents(data[i]['Logro'])
         data[i]['Prom'] = percents(data[i]['Prom'])
 
-    print(data)
-
     return data
 
 def kpis_liderfinan_gen3():
@@ -182,8 +180,8 @@ def doSomething2(formid):
             for id_name in element.items():
                 if formid in id_name:
                     return element
-
-        return 'No se encontró el numero de empleado.'
+                else:
+                    return 'No se encontró el numero de empleado.'
 
     except Exception as e:
         return f'Error: {e}'

@@ -74,7 +74,13 @@
                     })
                 let myArray4 = myArray3.join('')
                 results = document.getElementById('kpis')
-                results.innerHTML = `<p class="data-results">${myArray4}<p>`
+                results.innerHTML = ''
+                if(myArray4){
+                    results.innerHTML = `<p class="data-results">${myArray4}<p>`
+                }
+                else{
+                    results.innerHTML = `<p class="data-results">No hay KPI' s disponibles para este empleado<p>`
+                }
             }
             catch(err){
                 results.innerHTML = `<p class="data-results">No hay KPI' s para este empleado.<p>`
