@@ -1,53 +1,57 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-  
-  html * {
+    box-sizing: border-box;
+}
+
+html * {
     font-family: "Montserrat", sans-serif;
-  }
-  
-  .btn {
+}
+
+.btn {
     border-radius: 7px;
-  }
-  
-  .main {
+}
+
+.main {
     width: 100%;
     height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background-image: -webkit-gradient(linear, left top, right top, from(#B42222), to(#046241));
-    background-image: linear-gradient(to right, #B42222, #046241);
-  }
-  .main-input {
+    -ms-flex-align: center;
+    align-items: center;
+    background-image: -webkit-gradient(linear, left top, right top, from(#f58c1f), to(#046241));
+    background-image: linear-gradient(to right, #f58c1f, #046241);
+}
+
+.main-input {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     width: 100%;
     background: #FFF;
     width: 290px;
     border: 1px solid #fff;
     padding: 20px;
     border-radius: 12px;
-  }
-  .main-input--header {
+}
+
+.main-input--header {
     width: 100%;
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -56,17 +60,18 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .main-input--header h2 {
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.main-input--header h2 {
     font-size: 1rem;
     font-weight: 700;
     text-align: center;
@@ -75,113 +80,172 @@
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-  }
-  .main-input--body {
+}
+
+.main-input--body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     padding: 15px 0;
     width: 100%;
-  }
-  
-  #button {
-    margin-top: 15px;
-  }
-  
-  .logo {
-    width: 165px;
-  }
-  
-  @media (min-width: 767px) {
-    .main-input {
-      width: 100%;
-      background: #FFF;
-      width: 600px;
-      height: 500px;
-      border: 1px solid #fff;
-      padding: 20px;
-      border-radius: 12px;
-    }
-    .main-input--header {
-      width: 100%;
-      height: -webkit-fit-content;
-      height: -moz-fit-content;
-      height: fit-content;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-    }
-    .main-input--header h2 {
-      font-size: 1.2rem;
-      font-weight: 700;
-      text-align: center;
-      margin-top: 15px;
-      width: 400px;
-      height: -webkit-fit-content;
-      height: -moz-fit-content;
-      height: fit-content;
-    }
-    .main-input--body {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      padding: 15px 0;
-      width: 100%;
-    }
-    .main-input--body form input {
-      width: 300px;
-    }
-  
-    #button {
-      margin-top: 15px;
-    }
-  
-    .logo {
-      width: 165px;
-    }
-  }
-.modal-header{
-  margin-top: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
-#messages{
-  width: 100%;
-  padding: 30px 0;
-  height: 100%;
-  font-size: 1rem;
-  line-height: 1.7rem;
+.main-input--header-logos {
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+#button {
+    margin-top: 15px;
+}
+
+.logo {
+    padding: 10px 0;
+    width: 115px;
+}
+
+.rul {
+    margin-right: 7px;
+}
+
+.acl {
+    margin-left: 7px;
+}
+
+#messages {
+    width: 100%;
+    padding: 30px 0;
+    height: 100%;
+    font-size: 1rem;
+    line-height: 1.7rem;
+}
+
+#kpis {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-weight: 700;
+}
+
+.kpisResult{
+  margin: 0;
+  padding: 0;
+}
+
+.actionbtns {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 767px) {
+    .main-input {
+        width: 100%;
+        background: #FFF;
+        width: 600px;
+        height: 500px;
+        border: 1px solid #fff;
+        padding: 20px;
+        border-radius: 12px;
+    }
+    .main-input--header {
+        width: 100%;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .main-input--header-logos {
+        flex-direction: row;
+    }
+    .rul {
+        margin-top: 15px;
+        margin-right: 12px;
+    }
+    .acl {
+        margin-left: 12px;
+    }
+    .main-input--header h2 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 15px;
+        width: 400px;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+    }
+    .main-input--body {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 15px 0;
+        width: 100%;
+    }
+    .main-input--body form input {
+        width: 300px;
+    }
+    #button {
+        margin-top: 15px;
+    }
+    #button {
+        margin-right: 7px;
+    }
+    #button2 {
+        margin-left: 7px;
+    }
+    .logo {
+        width: 165px;
+    }
+    .actionbtns{
+      flex-direction: row;
+    }
+}
+
+.modal-header {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }

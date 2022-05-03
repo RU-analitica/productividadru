@@ -5,17 +5,25 @@
     <section class="main">
         <div class="main-input">
             <div class="main-input--header">
-                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Red unica logo" class="logo" />
-                <h2>¡Bienvenido al módulo de mensajes de desempeño!</h2>
+                <div class="main-input--header-logos">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Red unica logo" class="logo rul" />
+                    <img src="{{ url_for('static', filename='images/logo2.png') }}" alt="Red unica logo" class="logo acl" />
+                </div>
+                <h2>¡Bienvenido al módulo de mensajes de acompañándote!</h2>
             </div>
             <div class="main-input--body">
-                {{ wtf.quick_form(login_form) }}
                 <form class="d-flex">
-                    <input id="form" name="formid" class="form-control me-2" type="search" placeholder="# Empleado" aria-label="Search" />
+                    <input id="form" name="formid" class="form-control me-2 mb-3" type="search" placeholder="# Empleado" aria-label="Search" />
                 </form>
-                <button id="button" name="button" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Solicitar mensajes
-                  </button>
+                <div class="actionbtns">
+                    <button id="button" name="button" type="button" class="btn btn-success mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Solicitar mensajes
+                      </button>
+                    <button id="button2" name="button2" type="button" class="btn btn-danger mt-1" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                         Solicitar KPI' s 
+                      </button>
+                </div>
+
             </div>
         </div>
     </section>
@@ -43,5 +51,34 @@
         }
         const button = document.getElementById('button')
         button.addEventListener('click', getData)
+
+        async function getData2(){
+            try{
+                const req = await fetch("/kpis", {
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    method: 'POST',
+                    mode: 'cors',
+                    body: JSON.stringify({
+                        formid: document.getElementById('form').value
+                    })
+                })
+                const data = await req
+                let myJson = JSON.parse(await data.text())
+                let myArray = Object.values(myJson)
+                let myArray2 = Object.keys(myJson)
+                let myArray3 = myArray.map(function(item, index){
+                    return `<p class="kpisResult">${myArray2[index]}: ${item}<p>`
+                })
+                results = document.getElementById('kpis')
+                results.innerHTML = `<p class="data-results">${myArray3.sort()}<p>`
+            }
+            catch(err){
+                console.log(err)
+            }
+        }
+        const button2 = document.getElementById('button2')
+        button2.addEventListener('click', getData2)
     </script>
 {% endblock %}
