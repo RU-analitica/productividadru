@@ -181,7 +181,7 @@ def doSomething2(formid):
                 if formid in id_name:
                     return element
 
-        return element
+        return 'No se encontró el numero de empleado.'
 
     except Exception as e:
         return f'Error: {e}'
